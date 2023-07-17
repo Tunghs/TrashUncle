@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Controls.Primitives;
 using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
@@ -28,7 +29,34 @@ namespace TrashUncle
             InitializeComponent();
 
             this.PreviewMouseLeftButtonDown += MainWindow_PreviewMouseLeftButtonDown;
+            this.PreviewMouseRightButtonDown += MainWindow_PreviewMouseRightButtonDown;
             this.PreviewDrop += MainWindow_PreviewDropAsync;
+            MessagePopup.CustomPopupPlacementCallback = new System.Windows.Controls.Primitives.CustomPopupPlacementCallback(SetPopupLocation);
+        }
+
+        private void MainWindow_PreviewMouseRightButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            MessagePopup.IsOpen = true;
+        }
+
+        private CustomPopupPlacement[] SetPopupLocation(Size popupSize, Size targetSize, Point offset)
+        {
+            var centerX = 0.0;
+            if (this.Left - ((MessagePopup.Width / 2) + 20) < 0)
+            {
+                centerX = (this.Width / 2);
+            }
+            else
+            {
+                centerX = (this.Width / 2) - 220;
+            }
+
+            CustomPopupPlacement placement1 = new CustomPopupPlacement(new Point(centerX, 0), PopupPrimaryAxis.Vertical);
+            CustomPopupPlacement placement2 = new CustomPopupPlacement(new Point(0, 0), PopupPrimaryAxis.Horizontal);
+
+            CustomPopupPlacement[] placementArray = new CustomPopupPlacement[] { placement1, placement2 };
+
+            return placementArray;
         }
 
         private async void MainWindow_PreviewDropAsync(object sender, DragEventArgs e)
@@ -50,6 +78,7 @@ namespace TrashUncle
         {
             if (e.ChangedButton == MouseButton.Left)
             {
+                MessagePopup.IsOpen = false;
                 DragMove();
             }
         }
