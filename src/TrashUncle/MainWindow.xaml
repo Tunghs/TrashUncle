@@ -15,6 +15,50 @@
             <Ellipse Fill="Tomato">
 
             </Ellipse>
+
+            <Popup x:Name="MessagePopup" IsOpen="True" Placement="Left"
+                   AllowsTransparency="True">
+                <Grid>
+                    <Viewbox Width="100" Height="100" 
+                             VerticalAlignment="Center" HorizontalAlignment="Center">
+                        <Viewbox.LayoutTransform>
+                            <TransformGroup>
+                                <ScaleTransform ScaleX="4" ScaleY="1.4"/>
+                            </TransformGroup>
+                        </Viewbox.LayoutTransform>
+
+                        <Canvas Width="25" Height="25">
+                            <Path Fill="Beige" Stroke="Beige"
+                                  Data="M12,3C17.5,3 22,6.58 22,11C22,15.42 17.5,19 12,19C10.76,19 9.57,18.82 8.47,18.5C5.55,21 2,21 2,21C4.33,18.67 4.7,17.1 4.75,16.5C3.05,15.07 2,13.13 2,11C2,6.58 6.5,3 12,3Z" />
+                        </Canvas>
+                    </Viewbox>
+
+                    <Grid
+                          Width="260" Height="70"
+                          Margin="0 0 0 10">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="20"/>
+                        </Grid.RowDefinitions>
+
+                        <Grid>
+                            <TextBox Background="Transparent"
+                                     IsReadOnly="True" BorderThickness="0"
+                                     TextWrapping="Wrap" Margin="0 10 0 0"
+                                     Text="실행할 수 없습니다.">
+                            </TextBox>
+                        </Grid>
+                        
+                        <Grid Grid.Row="1">
+                            <Button Width="60"
+                                    Content="OK"/>
+                        </Grid>
+                    </Grid>
+                    
+
+
+                </Grid>
+            </Popup>
         </Grid>
     </Grid>
 </Window>
