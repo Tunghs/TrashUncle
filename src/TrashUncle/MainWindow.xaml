@@ -10,7 +10,7 @@
         WindowStyle="None"
         AllowDrop="True"
         AllowsTransparency="True"
-        x:Name="mainWindow">
+        x:Name="TrashUncle">
 
     <Window.Resources>
         <Style x:Key="IconButtonStyle" TargetType="Button">
