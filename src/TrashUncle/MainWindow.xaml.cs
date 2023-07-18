@@ -39,6 +39,13 @@ namespace TrashUncle
             MessagePopup.IsOpen = true;
         }
 
+        /// <summary>
+        /// popup의 위치를 설정하는 함수
+        /// </summary>
+        /// <param name="popupSize"></param>
+        /// <param name="targetSize"></param>
+        /// <param name="offset"></param>
+        /// <returns></returns>
         private CustomPopupPlacement[] SetPopupLocation(Size popupSize, Size targetSize, Point offset)
         {
             var centerX = 0.0;
@@ -125,6 +132,11 @@ namespace TrashUncle
             {
 
             }
+        }
+
+        private void ShowMessage(string message)
+        {
+            MessageTbx.Text = message;
         }
     }
 }
