@@ -10,6 +10,7 @@
         WindowStyle="None"
         AllowDrop="True"
         AllowsTransparency="True"
+        ResizeMode="NoResize"
         x:Name="TrashUncle">
 
     <Window.Resources>
