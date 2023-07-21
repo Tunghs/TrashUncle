@@ -39,9 +39,10 @@
     
     <Grid Background="Transparent">
         <Grid Background="Transparent">
-            <Ellipse Fill="Tomato">
 
-            </Ellipse>
+            <Ellipse Fill="Tomato"/>
+            <Image Source="./Resources/Uncle1.png"
+                   Width="200"/>
 
             <Popup x:Name="MessagePopup" IsOpen="True" Placement="Custom"
                    AllowsTransparency="True" PlacementTarget="{Binding ElementName=mainWindow}">

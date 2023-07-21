@@ -8,9 +8,13 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Update="Resources\Uncle1.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
+    <None Remove="Resources\Uncle1.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Resources\Uncle1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
 
 </Project>
