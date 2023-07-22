@@ -114,7 +114,7 @@ namespace TrashUncle
             }
             catch (Exception ex)
             {
-
+                ShowMessage(ex.Message);
             }
         }
 
@@ -130,7 +130,7 @@ namespace TrashUncle
             }
             catch (Exception ex)
             {
-
+                ShowMessage(ex.Message);
             }
         }
 
