@@ -111,6 +111,8 @@ namespace TrashUncle
 
                 FileInfo fileInfo = new FileInfo(filePath);
                 fileInfo.Delete();
+
+                ShowMessage("삭제되었습니다.");
             }
             catch (Exception ex)
             {
@@ -127,6 +129,8 @@ namespace TrashUncle
 
                 DirectoryInfo dirInfo = new DirectoryInfo(dirPath);
                 dirInfo.Delete(true);
+
+                ShowMessage("삭제되었습니다.");
             }
             catch (Exception ex)
             {
