@@ -51,15 +51,15 @@ namespace TrashUncle
             var centerX = 0.0;
             if (this.Left - ((MessagePopup.Width / 2) + 20) < 0)
             {
-                centerX = (this.Width / 2);
+                centerX = (this.Width / 2) - 10;
             }
             else
             {
-                centerX = (this.Width / 2) - 220;
+                centerX = (this.Width / 2) - 10;
             }
 
-            CustomPopupPlacement placement1 = new CustomPopupPlacement(new Point(centerX, 0), PopupPrimaryAxis.Vertical);
-            CustomPopupPlacement placement2 = new CustomPopupPlacement(new Point(0, 0), PopupPrimaryAxis.Horizontal);
+            CustomPopupPlacement placement1 = new CustomPopupPlacement(new Point(centerX, 55), PopupPrimaryAxis.Vertical);
+            CustomPopupPlacement placement2 = new CustomPopupPlacement(new Point(0, 55), PopupPrimaryAxis.Horizontal);
 
             CustomPopupPlacement[] placementArray = new CustomPopupPlacement[] { placement1, placement2 };
 
