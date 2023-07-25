@@ -52,10 +52,12 @@ namespace TrashUncle
             if (this.Left - ((MessagePopup.Width / 2) + 20) < 0)
             {
                 centerX = (this.Width / 2) - 10;
+                ShowMessage($"왼쪽입니다.{centerX}");
             }
             else
             {
                 centerX = (this.Width / 2) - 10;
+                ShowMessage($"오른쪽입니다.{centerX}");
             }
 
             CustomPopupPlacement placement1 = new CustomPopupPlacement(new Point(centerX, 55), PopupPrimaryAxis.Vertical);

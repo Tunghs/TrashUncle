@@ -44,7 +44,7 @@
             <Image Source="./Resources/Uncle1.png"
                    Width="200"/>
 
-            <Popup x:Name="MessagePopup" IsOpen="True" Placement="Custom"
+            <Popup x:Name="MessagePopup" IsOpen="False" Placement="Custom"
                    AllowsTransparency="True" PlacementTarget="{Binding ElementName=mainWindow}">
                 <Grid>
                     <Viewbox Width="100" Height="100" 
