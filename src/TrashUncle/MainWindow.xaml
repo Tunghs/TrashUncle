@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TrashUncle"
         mc:Ignorable="d"
-        Title="MainWindow" Height="300" Width="300"
+        Title="MainWindow" Height="200" Width="200"
         Background="Transparent"
         WindowStyle="None"
         AllowDrop="True"
@@ -42,7 +42,7 @@
 
             <Ellipse Fill="Tomato"/>
             <Image Source="./Resources/Uncle1.png"
-                   Width="200"/>
+                   Width="135"/>
 
             <Popup x:Name="MessagePopup" IsOpen="False" Placement="Custom"
                    AllowsTransparency="True" PlacementTarget="{Binding ElementName=mainWindow}">
