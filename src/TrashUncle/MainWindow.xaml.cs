@@ -49,14 +49,16 @@ namespace TrashUncle
         private CustomPopupPlacement[] SetPopupLocation(Size popupSize, Size targetSize, Point offset)
         {
             var centerX = 0.0;
-            if (this.Left - ((MessagePopup.Width / 2) + 20) < 0)
+            if (this.Left - ((260 / 2) + 20) < 0)
             {
                 centerX = (this.Width / 2) - 10;
+                MessagePopup.FlowDirection = FlowDirection.LeftToRight;
                 ShowMessage($"왼쪽입니다.{centerX}");
             }
             else
             {
                 centerX = (this.Width / 2) - 10;
+                MessagePopup.FlowDirection = FlowDirection.RightToLeft;
                 ShowMessage($"오른쪽입니다.{centerX}");
             }
 
