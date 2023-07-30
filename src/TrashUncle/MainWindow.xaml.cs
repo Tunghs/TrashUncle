@@ -57,7 +57,7 @@ namespace TrashUncle
             }
             else
             {
-                centerX = (this.Width / 2) - 10;
+                centerX = (this.Width / 2) - 500;
                 MessagePopup.FlowDirection = FlowDirection.RightToLeft;
                 ShowMessage($"오른쪽입니다.{centerX}");
             }
