@@ -28,10 +28,12 @@ namespace TrashUncle
         {
             InitializeComponent();
 
+            PopupManage popupManage = new PopupManage(MessagePopup);
+
             this.PreviewMouseLeftButtonDown += MainWindow_PreviewMouseLeftButtonDown;
             this.PreviewMouseRightButtonDown += MainWindow_PreviewMouseRightButtonDown;
             this.PreviewDrop += MainWindow_PreviewDropAsync;
-            MessagePopup.CustomPopupPlacementCallback = new System.Windows.Controls.Primitives.CustomPopupPlacementCallback(SetPopupLocation);
+            MessagePopup.CustomPopupPlacementCallback = new System.Windows.Controls.Primitives.CustomPopupPlacementCallback(popupManage.GetPopupLocation);
         }
 
         private void MainWindow_PreviewMouseRightButtonDown(object sender, MouseButtonEventArgs e)
