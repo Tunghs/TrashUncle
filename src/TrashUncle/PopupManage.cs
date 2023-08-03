@@ -10,25 +10,27 @@ namespace TrashUncle
 {
     internal class PopupManage
     {
+        private Window window;
         private Popup popup;
 
-        public PopupManage(Popup popup)
+        public PopupManage(Window window, Popup popup)
         {
+            this.window = window;
             this.popup = popup;
         }
 
         public CustomPopupPlacement[] GetPopupLocation(Size popupSize, Size targetSize, Point offset)
         {
             var centerX = 0.0;
-            if (((Window)popup.Parent).Left - ((260 / 2) + 20) < 0)
+            if (window.Left - ((260 / 2) + 20) < 0)
             {
-                centerX = (((Window)popup.Parent).Width / 2) - 10;
+                centerX = (window.Width / 2) - 10;
                 popup.FlowDirection = FlowDirection.LeftToRight;
                 // ShowMessage($"왼쪽입니다.{centerX}");
             }
             else
             {
-                centerX = (((Window)popup.Parent).Width / 2) - 500;
+                centerX = (window.Width / 2) - 500;
                 popup.FlowDirection = FlowDirection.RightToLeft;
                 /// ShowMessage($"오른쪽입니다.{centerX}");
             }

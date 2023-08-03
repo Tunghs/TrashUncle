@@ -28,7 +28,7 @@ namespace TrashUncle
         {
             InitializeComponent();
 
-            PopupManage popupManage = new PopupManage(MessagePopup);
+            PopupManage popupManage = new PopupManage(this, MessagePopup);
 
             this.PreviewMouseLeftButtonDown += MainWindow_PreviewMouseLeftButtonDown;
             this.PreviewMouseRightButtonDown += MainWindow_PreviewMouseRightButtonDown;
