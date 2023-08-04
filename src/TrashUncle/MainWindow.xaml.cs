@@ -41,37 +41,6 @@ namespace TrashUncle
             MessagePopup.IsOpen = true;
         }
 
-        /// <summary>
-        /// popup의 위치를 설정하는 함수
-        /// </summary>
-        /// <param name="popupSize"></param>
-        /// <param name="targetSize"></param>
-        /// <param name="offset"></param>
-        /// <returns></returns>
-        private CustomPopupPlacement[] SetPopupLocation(Size popupSize, Size targetSize, Point offset)
-        {
-            var centerX = 0.0;
-            if (this.Left - ((260 / 2) + 20) < 0)
-            {
-                centerX = (this.Width / 2) - 10;
-                MessagePopup.FlowDirection = FlowDirection.LeftToRight;
-                ShowMessage($"왼쪽입니다.{centerX}");
-            }
-            else
-            {
-                centerX = (this.Width / 2) - 500;
-                MessagePopup.FlowDirection = FlowDirection.RightToLeft;
-                ShowMessage($"오른쪽입니다.{centerX}");
-            }
-
-            CustomPopupPlacement placement1 = new CustomPopupPlacement(new Point(centerX, 55), PopupPrimaryAxis.Vertical);
-            CustomPopupPlacement placement2 = new CustomPopupPlacement(new Point(0, 55), PopupPrimaryAxis.Horizontal);
-
-            CustomPopupPlacement[] placementArray = new CustomPopupPlacement[] { placement1, placement2 };
-
-            return placementArray;
-        }
-
         private async void MainWindow_PreviewDropAsync(object sender, DragEventArgs e)
         {
             if (!e.Data.GetDataPresent(DataFormats.FileDrop))
