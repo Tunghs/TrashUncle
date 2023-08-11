@@ -12,6 +12,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.1" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Resource Include="Resources\Uncle1.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
